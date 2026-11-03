@@ -8,16 +8,17 @@ $library = [
   new Herb('Mint', 'partial shade', [3, 4, 5], 'tea', 'high'),
   new Plant('Sweet pea', 'full sun', [3, 4], 'medium'),
   new Herb('Parsley', 'partial shade', [3, 4, 5, 6, 7], 'garnish'),
-new Herb('Coriander', 'full sun', [4, 5, 6, 7], 'curries'),
-new Herb('Chives', 'full sun', [3, 4, 5, 6], 'salads'),
-new Herb('Thyme', 'full sun', [4, 5], 'roasts', 'low'),
-new Vegetable('Carrot', 'full sun', [3, 4, 5, 6, 7], 75),
-new Vegetable('Lettuce', 'partial shade', [3, 4, 5, 6, 7, 8], 50, 'high'),
-new Vegetable('Radish', 'full sun', [3, 4, 5, 6, 7, 8, 9], 30),
-new Vegetable('Pea', 'full sun', [3, 4, 5, 6], 90),
-new Plant('Sunflower', 'full sun', [4, 5], 'high'),
-new Plant('Nasturtium', 'full sun', [4, 5, 6]),
+  new Herb('Coriander', 'full sun', [4, 5, 6, 7], 'curries'),
+  new Herb('Chives', 'full sun', [3, 4, 5, 6], 'salads'),
+  new Herb('Thyme', 'full sun', [4, 5], 'roasts', 'low'),
+  new Vegetable('Carrot', 'full sun', [3, 4, 5, 6, 7], 75),
+  new Vegetable('Lettuce', 'partial shade', [3, 4, 5, 6, 7, 8], 50, 'high'),
+  new Vegetable('Radish', 'full sun', [3, 4, 5, 6, 7, 8, 9], 30),
+  new Vegetable('Pea', 'full sun', [3, 4, 5, 6], 90),
+  new Plant('Sunflower', 'full sun', [4, 5], 'high'),
+  new Plant('Nasturtium', 'full sun', [4, 5, 6]),
 ];
+usort($library, fn (Plant $a, Plant $b) => strcmp($a->name, $b->name));
 
 $month = (int) ($_GET['month'] ?? date('n'));
 if ($month < 1 || $month > 12) {
