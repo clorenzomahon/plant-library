@@ -1,2 +1,2 @@
 <?php
-echo "Hello, plant library!\n";
+echo "Hello, plant library friends!\n";
