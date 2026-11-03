@@ -8,6 +8,7 @@ class Herb extends Plant
     string $sun,
     array $sowingMonths,
     public string $use,
+    public string $water = 'medium',
   ){
     parent ::__construct($name, $sun, $sowingMonths);
   }

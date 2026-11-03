@@ -1,11 +1,14 @@
 <?php
 
-class Plant
+require_once 'Sowable.php';
+
+class Plant implements Sowable
 {
     public function __construct(
         public string $name,
         public string $sun,
         public array $sowingMonths,
+        public string $water = 'medium',
     ) {
     }
 
@@ -16,6 +19,6 @@ class Plant
 
     public function describe(): string
     {
-        return "{$this->name} (needs {$this->sun})";
+        return "{$this->name} (needs {$this->sun}, {$this->water} water)";
     }
 }

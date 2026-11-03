@@ -1,3 +1,6 @@
 <?php
-require_once 'Sowable.php';
-class Plant implements Sowable {
+
+interface Sowable
+{
+    public function canSowInMonth(int $month): bool;
+}

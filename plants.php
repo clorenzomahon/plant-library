@@ -6,7 +6,13 @@ $plants = [
  ['name' => 'Sweet pea', 'sun' => 'full sun', 'months' => [3, 4]],
 ];
 
+function canSowInMonth (array $plant, int $month): bool{
+  return in_array($month, $plant['months']);
+}
 
-foreach ($plants as $plant){
-  echo $plant['name'] . ' - ' . $plant['sun'] . "\n";
-} 
+$month = (int) date('n');
+foreach ($plants as $plant) {
+  if (canSowInMonth($plant, $month)) {
+    echo $plant['name'] . " can be sown this month.\n";
+  }
+}
